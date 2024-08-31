@@ -1,0 +1,164 @@
+.chat{
+    flex: 1;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    height: 100%;
+    width: 40vw;
+    display: flex;
+    flex-direction: column  ;
+    .top{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      color: black;
+      font-weight:bolder;
+        background-color: rgb(239, 225, 225);
+
+
+        .userb{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .texts{
+                display: flex;
+                gap: 5px;
+                flex-direction: column;
+                span{
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+                p{
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: grey;
+                }
+            }
+        }
+.icons{
+    display: flex;
+    gap: 20px;
+    img{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+}
+
+    }
+    .center{
+        padding: 20px;
+        flex: 1;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .message{
+            max-width: 70%;
+            display: flex;
+            gap: 20px;
+            &.own{
+                align-self: flex-end;
+
+                .texts{
+                    p{
+                        background-color: red;
+                        opacity: 0.5;
+
+                    }
+                }
+            }
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .texts{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 5pxs;
+                img{
+                    width: 100%;
+                    height: 300px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+                p{
+                    padding: 20px;
+                    background-color:lightseagreen;
+                    border-radius: 10px;
+                }
+                span{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .bottom{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(239, 225, 225);
+        gap: 10px;
+        margin-top: auto;
+        .icons{
+            display: flex;
+            height: 20px;
+          
+        } img{
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            margin-right: 10px;
+           }
+        input{
+            flex: 1;
+            background-color: black;
+            border: none;
+             outline:none;
+             color: grey;
+             border-radius: 16px;
+             font-size: 16px;
+             height: 45px;
+             opacity: 0.5;
+             width: 33vw;
+             &:disabled{
+                cursor: not-allowed;
+            }
+        }
+        .emoji{
+            position: relative;
+            .picker{
+                position: absolute;
+                bottom: 50px;
+                left: 0%;
+
+            }
+        }
+        .sendButton{
+            background-color:black;
+            color: white;
+            padding:10px 20px;
+            border:none;
+            cursor: pointer;
+            border-radius: 5px;
+            &:hover{
+                background-color:grey;
+            }
+            &:disabled{
+                background-color: lightblue;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
